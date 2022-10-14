@@ -1,26 +1,5 @@
-doctype html
-html
-  head
-    meta(name='viewport', content='with=device-width,initial-scale=1.0')
-    title= title
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
-  body
-    .navbar-default.navbar.navbar-fixed-top 
-      .container 
-        .navbar-header 
-          a.navbar-brand(href='/') MekanBul 
-          button.navbar-toggle(type='button', data-toggle='collapse',
-          data-target='#navbar-main')
-            span.icon-bar 
-            span.icon-bar 
-            span.icon-bar 
-        #navbar-main.navbar-collapse.collapse 
-          ul.nav.navbar-nav 
-            li 
-              a(href='/hakkinda') Hakkında 
-  .container 
-    block content 
-    footer 
-      small &copy; Mertcan Türker 2022
-  script(src='/javascripts/jquery-3.6.1.min.js')
-  script(src='/bootstrap/js/bootstrap.min.js')
+extends layout 
+
+block content 
+  h1= title 
+  p Welcome to Hakkında 
