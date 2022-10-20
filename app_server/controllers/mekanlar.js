@@ -61,7 +61,7 @@ var router = express.Router();
               "yorumYapan":"Mertcan Türker",
               "puan":"4",
               "tarih":"20 Ekim 2022",
-              "yorumMetni":"Kahveler Çok iyiydi."
+              "yorumMetni":"Kahveler çok iyiydi."
             },
           ]
         }
