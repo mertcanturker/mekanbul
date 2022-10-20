@@ -22,7 +22,7 @@ var router = express.Router();
           "adres": "SDÜ Doğu Kampüsü",
           "puan": "3",
           "imkanlar": ["Kahve","Çay","Pasta"],
-          "mesafe": "2km"
+          "mesafe": "5km"
         }
       ]
     }
@@ -32,9 +32,9 @@ var router = express.Router();
   const mekanBilgisi=function(req, res, next) {
     res.render('mekanbilgisi',
       {
-        "baslik":"Mekan Bilgisi",
-        "mekanBaslik":"Starbucks",
-        "mekanDetay":{
+        "baslik": "Mekan Bilgisi",
+        "mekanBaslik": "Starbucks",
+        "mekanDetay": {
           "ad": "Starbucks",
           "adres": "Centrum Garden AVM",
           "puan": "4",
@@ -43,25 +43,26 @@ var router = express.Router();
             "enlem": "37.7",
             "boylam":"30.5"
           },
-          "saatler": [
-            {
-              "gunler": "Pazartesi-Cuma",
-              "acilis": "9:00-23:00",
-              "kapali": "false"
-            },
-            {
-              "gunler": "Cumartesi-Pazar",
-              "acilis": "10:00-22:00",
-              "kapali": "false"
-            }
-          ],
+          "saatler":[{
+            "gunler":"Pazartesi-Cuma",
+            "acilis":"9:00",
+            "kapanis":"23:00",
+            "kapali": false
+        },
+        {
+            "gunler":"Cumartesi-Pazar",
+            "acilis":"10:00",
+            "kapanis":"22:00",
+            "kapali": false
+        }
+    ],
           "yorumlar": [
             {
               "yorumYapan":"Mertcan Türker",
               "puan":"4",
               "tarih":"20 Ekim 2022",
               "yorumMetni":"Kahveler iyi."
-            }
+            },
           ]
         }
       });
