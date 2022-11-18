@@ -10,7 +10,7 @@ db.mekanlar.insertOne(
     "kahve",
     "pasta"
   ],
-  "koordinatlar": [
+  "koordinat": [
     37.83226584629666,
     30.524732239878013
   ],
