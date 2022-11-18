@@ -1,14 +1,12 @@
-var mongoose=require("mongoose");
-var Mekan=mongoose.model("mekan");
-
-const cevapOlustur=function(res,status,content){
+var mongoose = require("mongoose");
+var Mekan = mongoose.model("mekan");
+const cevapOlustur = function (res, status, content) {
     res.status(status).json(content);
 }
 
 const yorumEkle = function (req, res) {
     cevapOlustur(res, 200, { "durum": "başarılı" });
 }
-
 const yorumGetir = function (req, res) {
     if(req.params && req.params.mekanid && req.params.yorumid){
         Mekan.findById(req.params.mekanid)
@@ -57,16 +55,14 @@ const yorumGetir = function (req, res) {
     }); 
 }
 };
-
-const yorumSil=function(req,res){
-    cevapOlustur(res,200,{"durum":"başarılı"});
+const yorumSil = function (req, res) {
+    cevapOlustur(res, 200, { "durum": "başarılı" });
+}
+const yorumGuncelle = function (req, res) {
+    cevapOlustur(res, 200, { "durum": "başarılı" });
 }
 
-const yorumGuncelle=function(req,res){
-    cevapOlustur(res,200,{"durum":"başarılı"});
-}
-
-module.exports={
+module.exports = {
     yorumEkle,
     yorumGetir,
     yorumSil,

@@ -1,11 +1,8 @@
-const e = require("express");
-var mongoose=require("mongoose");
-var Mekan=mongoose.model("mekan");
-
-const cevapOlustur=function(res,status,content){
+var mongoose = require("mongoose");
+var Mekan = mongoose.model("mekan");
+const cevapOlustur = function (res, status, content) {
     res.status(status).json(content);
 }
-
 var cevrimler = (function () {
     var dunyaYariCap = 6371;
     var radyan2Kilometre = function (radyan) {
@@ -61,7 +58,6 @@ const mekanlariListele = async (req, res) => {
         cevapOlustur(res, 404, e);
     }
 };
-
 const mekanGetir = function (req, res) {
     if (req.params && req.params.mekanid) {
         Mekan.findById(req.params.mekanid).exec(function (hata, mekan) {
@@ -80,25 +76,22 @@ const mekanGetir = function (req, res) {
         cevapOlustur(res, 404, { "hata": "İstekte mekan yok!" });
     }
 }
-
-const mekanEkle=function(req,res){
-    cevapOlustur(res,200,{"durum":"başarılı"});
+const mekanGuncelle = function (req, res) {
+    cevapOlustur(res, 200, { "durum": "başarılı" });
+}
+const mekanEkle = function (req, res) {
+    cevapOlustur(res, 200, { "durum": "başarılı" });
+}
+const mekanSil = function (req, res) {
+    cevapOlustur(res, 200, { "durum": "başarılı" });
 }
 
-const mekanGuncelle=function(req,res){
-    cevapOlustur(res,200,{"durum":"başarılı"});
-}
-
-const mekanSil=function(req,res){
-    cevapOlustur(res,200,{"durum":"başarılı"});
-}
-
-module.exports={
+module.exports = {
+    mekanlariListele,
     mekanEkle,
     mekanGetir,
-    mekanGuncelle,
     mekanSil,
-    mekanlariListele
+    mekanGuncelle,
 }
 
 
