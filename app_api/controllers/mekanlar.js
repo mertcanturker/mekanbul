@@ -3,9 +3,9 @@ var Mekan = mongoose.model("mekan");
 const cevapOlustur = function (res, status, content) {
     res.status(status).json(content);
 }
-var cevrimler = (function(){
+var cevrimler = (function() {
     var dunyaYariCap = 6371; // km
-    var radyan2Kilometre = function(radyan) {
+    var radyan2Kilometre = function (radyan) {
         return parseFloat(radyan * dunyaYariCap);
     };
     var kilometre2Radyan = function (mesafe) {
@@ -58,6 +58,9 @@ const mekanlariListele = async (req, res) => {
         cevapOlustur(res, 404, e);
     }
 };
+const mekanEkle = function (req, res) {
+    cevapOlustur(res, 200, { "durum": "başarılı" });
+}
 const mekanGetir = function (req, res) {
     if (req.params && req.params.mekanid) {
         Mekan.findById(req.params.mekanid).exec(function (hata, mekan) {
@@ -71,14 +74,11 @@ const mekanGetir = function (req, res) {
                 cevapOlustur(res, 200, mekan);
             }
         });
-    } else {
+    }   else {
         cevapOlustur(res, 404, { "hata": "İstekte mekanid yok!" });
     }
-}
+};
 const mekanGuncelle = function (req, res) {
-    cevapOlustur(res, 200, { "durum": "başarılı" });
-}
-const mekanEkle = function (req, res) {
     cevapOlustur(res, 200, { "durum": "başarılı" });
 }
 const mekanSil = function (req, res) {

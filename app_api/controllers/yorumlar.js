@@ -65,6 +65,6 @@ const yorumGuncelle = function (req, res) {
 module.exports = {
     yorumEkle,
     yorumGetir,
-    yorumGuncelle,
-    yorumSil
+    yorumSil,
+    yorumGuncelle
 }
