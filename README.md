@@ -6,5 +6,5 @@
 2. [Mekanın ID İle Mekan Bilgilerini Getir](https://odev5.mertcantrker.repl.co/api/mekanlar/63789af6eb32294a9cb854c0)
 ![Mekanın ID İle Mekan Bilgilerini Getir](./resimler/mekan_getir.png)
 
-3. [Bir Mekana Ait Belirli Bir Yorumu Göster](https://odev5.mertcantrker.repl.co/api/mekanlar/63789af6eb32294a9cb854c0/yorumlar/63789b3179952f7bbb579405)
-![Bir Mekana Ait Belirli Bir Yorumu Göster](./resimler/yorum_getir.png)
+3. [Bir Mekana Ait Belirli Bir Yorumu Getir](https://odev5.mertcantrker.repl.co/api/mekanlar/63789af6eb32294a9cb854c0/yorumlar/63789b3179952f7bbb579405)
+![Bir Mekana Ait Belirli Bir Yorumu Getir](./resimler/yorum_getir.png)
