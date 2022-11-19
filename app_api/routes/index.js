@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var ctrlMekanlar=require('../controllers/mekanlar');
 var ctrlYorumlar=require('../controllers/yorumlar');
+
 router
 .route('/mekanlar')
 .get(ctrlMekanlar.mekanlariListele)

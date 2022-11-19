@@ -36,5 +36,4 @@ mongoose.connection.on("error",function(){
     console.log("Bağlantı hatası");
 }
 );
-
 require("./mekansema");
