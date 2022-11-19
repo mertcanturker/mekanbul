@@ -1,10 +1,11 @@
-var express=require("express");
-var router=express.Router();
-var ctrlMekanlar=require("../controllers/mekanlar");
 var express = require('express');
 var router = express.Router();
-var ctrlMekanlar = require('../controllers/mekanlar');
-var ctrlYorumlar = require('../controllers/yorumlar');
+var ctrlMekanlar=require('../controllers/mekanlar');
+var ctrlYorumlar=require('../controllers/yorumlar');
+router
+.route('/mekanlar')
+.get(ctrlMekanlar.mekanlariListele)
+.post(ctrlMekanlar.mekanEkle);
 
 router
 .route('/mekanlar/:mekanid')
@@ -13,20 +14,13 @@ router
 .delete(ctrlMekanlar.mekanSil);
 
 router
-.route('/mekanlar')
-.get(ctrlMekanlar.mekanlariListele)
-.post(ctrlMekanlar.mekanEkle);
-
-router
-.route("/mekanlar/:mekanid/yorumlar")
+.route('/mekanlar/:mekanid/yorumlar')
 .post(ctrlYorumlar.yorumEkle);
 
 router
-.route("/mekanlar/:mekanid/yorumlar/:yorumid")
+.route('/mekanlar/:mekanid/yorumlar/:yorumid')
 .get(ctrlYorumlar.yorumGetir)
 .put(ctrlYorumlar.yorumGuncelle)
 .delete(ctrlYorumlar.yorumSil);
 
 module.exports=router;
-
-

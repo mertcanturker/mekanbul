@@ -77,6 +77,7 @@ const mekanGetir = function (req, res) {
         cevapOlustur(res, 404, { "hata": "İstekte mekanid yok!" });
     }
 };
+
 const mekanGuncelle = function (req, res) {
     cevapOlustur(res, 200, { "durum": "başarılı" });
 }
@@ -91,13 +92,6 @@ module.exports = {
     mekanlariListele,
     mekanEkle,
     mekanGetir,
-    mekanSil,
     mekanGuncelle,
+    mekanSil
 }
-
-
-
-
-
-
-
