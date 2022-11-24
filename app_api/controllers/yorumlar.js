@@ -48,7 +48,7 @@ var yorumOlustur = function (req, res, gelenMekan){
             }else{
                 ortalamaPuanGuncelle(mekan._id);
                 yorum = mekan.yorumlar[mekan.yorumlar.length - 1];
-                cevapOlustur(res, 200, yorum);
+                cevapOlustur(res, 201, yorum);
             }
         });
     }

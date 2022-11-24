@@ -80,7 +80,7 @@ const mekanEkle = function (req, res) {
             cevapOlustur(res,400,hata);
         }
         else{
-            cevapOlustur(res,200,mekan);
+            cevapOlustur(res,201,mekan);
         }
     });
 };
