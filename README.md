@@ -2,10 +2,10 @@
 
 
 ### 1. Collection : MekanBul API Testleri
-![1](/resimler/collectiontest.png)
+![1](/resimler/run_all_test.png)
 
 ### 2. API Testleri
-![2](/resimler/apitest.png)
+![2](/resimler/npm_run_test.png)
 
 
 # MekanBul REST API Adresleri
