@@ -1,6 +1,7 @@
 # MekanBul REST API TESTLERİ
 
 [Replit Adresi](https://mekanbul.mertcantrker.repl.co/?enlem=37&boylam=35)
+![Replit Adresi](./resimler/replitson.png)
 
 ### 1. Collection : MekanBul API Testleri
 ![1](/resimler/run_all_test.png)
