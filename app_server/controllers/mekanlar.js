@@ -43,9 +43,6 @@ const anaSayfa=function(req,res,next){
         params:{
             enlem:req.query.enlem,
             boylam:req.query.boylam
-        },
-        headers:{
-            'Accept-Encoding':'application/json',
         }
     }).then(function(response){ 
         var i,mekanlar;
@@ -86,9 +83,7 @@ var hataGoster = function(res,hata){
 
 const mekanBilgisi=function(req,res){
    axios
-    .get(apiSecenekleri.sunucu+apiSecenekleri.apiYolu+req.params.mekanid, {headers:{
-        'Accept-Encoding':'application/json',
-    }})
+    .get(apiSecenekleri.sunucu+apiSecenekleri.apiYolu+req.params.mekanid)
     .then(function(response){
         req.session.mekanAdi=response.data.ad;
         detaySayfasiOlustur(res,response.data);
