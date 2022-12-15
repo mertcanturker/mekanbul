@@ -106,7 +106,7 @@ const mekanGuncelle = function (req, res) {
     if(!req.params.mekanid){
         cevapOlustur(res, 404, {mesaj: "Bulunamadı. mekanid gerekli"});
         return;
-    } // - işareti yorumlar ve puan dışında herşeyi almamızı söyler
+    }
     Mekan.findById(req.params.mekanid).select("-yorumlar -puan").exec(function(hata, gelenMekan){
         if(!gelenMekan) {cevapOlustur(res, 404, { mesaj: "mekanid bulunamadı"}); 
         return;
